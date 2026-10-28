@@ -36,8 +36,10 @@
 <https://w3id.org/FAIR-course-UT/2026/group22/distribution/waterbodies-rdf>
     a dcat:Distribution ;
     dct:title "FAIRified IBGE BC250 Water Bodies RDF"@en ;
-    dct:description "RDF/Turtle representation of 400 water-body records using a custom ontology and GeoSPARQL polygon geometries with EPSG:4674."@en ;
-    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+    dct:description "RDF/Turtle representation of 400 water-body records using a custom ontology and GeoSPARQL polygon geometries with EPSG:4674."@en ;    
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> ;
+    dcat:downloadURL <https://raw.githubusercontent.com/healing-404/fair-waterbodies-group22/main/waterbodies_fairified.ttl> .
+
 
 
 <https://w3id.org/FAIR-course-UT/2026/group22/agent/group22>  
