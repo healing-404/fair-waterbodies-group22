@@ -1,0 +1,55 @@
+
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix dct: <http://purl.org/dc/terms/> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+
+
+<https://w3id.org/FAIR-course-UT/2026/group22/dataset/waterbodies>
+    a dcat:Dataset ;
+    dct:title "IBGE BC250 2025 — Brazilian Water Bodies (FAIRified)"@en ;
+    dct:description "A FAIRification project based on 400 water-body records from the IBGE BC250 2025 hydrography dataset. The records describe water-body types, water regimes, names where available, and polygon geometries represented using GeoSPARQL."@en ;
+    
+    dct:language <http://id.loc.gov/vocabulary/iso639-1/pt> ;
+    dct:publisher <https://w3id.org/FAIR-course-UT/2026/group22/agent/group22> ;
+    dct:source <https://www.ibge.gov.br/> ;
+   
+    dct:spatial <http://sws.geonames.org/3469034/> ;
+    dcat:distribution
+        <https://w3id.org/FAIR-course-UT/2026/group22/distribution/waterbodies-csv> ,
+        <https://w3id.org/FAIR-course-UT/2026/group22/distribution/waterbodies-rdf> .
+
+<https://w3id.org/FAIR-course-UT/2026/group22/dataset/waterbodies>
+    dct:creator <https://w3id.org/FAIR-course-UT/2026/group22/agent/group22> .
+
+
+
+<https://w3id.org/FAIR-course-UT/2026/group22/distribution/waterbodies-csv>
+    a dcat:Distribution ;
+    dct:title "Original IBGE BC250 Water Bodies CSV"@en ;
+    dct:description "Source water-body data in CSV format, including original attributes and polygon geometries represented as WKT."@en ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/csv> .
+ 
+
+
+<https://w3id.org/FAIR-course-UT/2026/group22/distribution/waterbodies-rdf>
+    a dcat:Distribution ;
+    dct:title "FAIRified IBGE BC250 Water Bodies RDF"@en ;
+    dct:description "RDF/Turtle representation of 400 water-body records using a custom ontology and GeoSPARQL polygon geometries with EPSG:4674."@en ;
+    dcat:mediaType <https://www.iana.org/assignments/media-types/text/turtle> .
+
+
+<https://w3id.org/FAIR-course-UT/2026/group22/agent/group22>  
+
+    a foaf:Group ;
+    foaf:name "FAIR Data Engineering — Group 22"@en .   
+
+    
+
+<https://w3id.org/FAIR-course-UT/2026/group22/dataset/waterbodies>
+    dct:provenance [
+        a dct:ProvenanceStatement ;
+        rdfs:label "Derived from the IBGE BC250 2025 hydrography water-body layer (CCAR:BC250_2025_hid_massa_dagua_a). A 400-record CSV extract was semantically transformed into RDF/Turtle using OpenRefine. Water-body classes and properties were modelled in Protégé, and polygon geometries were represented using GeoSPARQL WKT literals with the EPSG:4674 coordinate reference system."@en
+    ] .
+
