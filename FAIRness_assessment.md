@@ -15,11 +15,11 @@
 
 | FAIR Principle | Original Dataset | FAIRified Version | Assessment |
 |---|---|---|---|
-| F1 — Persistent identifiers | Original WFS feature identifiers | Unique W3ID-based resource URIs generated | Partially achieved; resolution pending |
-| F2 — Rich metadata | IBGE metadata and XSD schema | Additional DCAT Dataset and Distribution metadata | Improved locally |
+| F1 — Persistent identifiers | Original WFS feature identifiers | W3ID-based resource URIs created; data, ontology and selected metadata redirects tested | Improved; long-term persistence not established |
+| F2 — Rich metadata | IBGE metadata and XSD schema | Additional DCAT Dataset and Distribution metadata publicly published | Improved; some metadata fields remain incomplete |
 | F3 — Metadata identifies data | Original source metadata | Dataset linked to CSV and RDF distributions | Partially achieved |
 | F4 — Searchable registration | IBGE online service | No independent searchable registration | Not yet achieved |
-| A1 — Retrievable by identifier | Original WFS access | FAIRified files currently local | Not yet achieved |
+| A1 — Retrievable by identifier | Original WFS access | RDF, ontology and metadata publicly hosted; selected W3ID redirects verified | Improved for published resources |
 | A2 — Persistent metadata access | Source metadata maintained by IBGE | Independent metadata persistence not established | Not demonstrated |
 | I1 — Formal representation | GML, CSV and XML schema | RDF/Turtle using an ontology | Improved |
 | I2 — Shared vocabularies | Existing geographic standards | RDFS, GeoSPARQL, DCAT and DCTERMS | Improved |
@@ -40,6 +40,7 @@
 - RDF transformation configured in OpenRefine.
 - DCAT metadata created for one dataset and two distributions.
 - Two malformed property IRIs were identified and corrected during validation.
+- W3ID pull request #64 was merged and five redirect identifiers were browser-tested.
 
 ## 4. Limitations
 
@@ -47,7 +48,7 @@
 - Water-body types and regimes remain Portuguese text literals rather than linked controlled vocabulary concepts.
 - The 400-record extraction was limited by the Python script and was not restricted to Minas Gerais.
 - The original IBGE dataset's redistribution licence requires verification.
-- Public hosting, W3ID redirects and FAIR Data Point publication were not completed at the time of this assessment.
+- FAIRified RDF, ontology and metadata are publicly hosted on GitHub, and selected W3ID redirects have been verified. Original CSV publication and FAIR Data Point deployment remain incomplete.
 - No formal automated FAIRness score was calculated.
 
 ## 5. Conclusion
@@ -56,6 +57,6 @@ The FAIRification improved the semantic interoperability and machine-readable de
 
 The strongest demonstrated results are the RDF representation, reuse of established semantic and geospatial vocabularies, and the creation of descriptive DCAT metadata.
 
-However, full findability, accessibility and reusability have not yet been demonstrated. Public publication, persistent identifier resolution and verified licensing information remain necessary.
+Public GitHub hosting and working W3ID redirects have improved the findability and accessibility of the published resources. However, complete FAIRness has not yet been demonstrated: original CSV publication, verified licensing information, and FAIR Data Point deployment remain incomplete.
 
 This is a qualitative assessment of the implemented work, not a claim that the dataset is fully FAIR.
