@@ -1,0 +1,47 @@
+@prefix dcterms: <http://purl.org/dc/terms/> .
+@prefix dcat: <http://www.w3.org/ns/dcat#> .
+@prefix foaf: <http://xmlns.com/foaf/0.1/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix ldp: <http://www.w3.org/ns/ldp#> .
+
+<http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4> a dcat:Resource,
+    dcat:Distribution;
+  <http://www.w3.org/2000/01/rdf-schema#label> "IBGE BC250 2025 - Original Water Bodies CSV";
+  dcterms:title "IBGE BC250 2025 - Original Water Bodies CSV";
+  dcat:version "1.0.0";
+  <https://w3id.org/fdp/fdp-o#metadataIssued> "2026-11-01T21:44:07.806245731Z"^^xsd:dateTime;
+  <https://w3id.org/fdp/fdp-o#metadataModified> "2026-11-01T21:44:07.806245731Z"^^xsd:dateTime;
+  dcterms:license <http://purl.org/NET/rdflicense/cc-zero1.0>;
+  dcterms:description "Original tabular representation of the IBGE BC250 2025 water-body layer, used as the source for Group 22's 400-record extract.";
+  dcterms:language <http://id.loc.gov/vocabulary/iso639-1/pt>;
+  <https://w3id.org/fdp/fdp-o#metadataIdentifier> <http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4#identifier>;
+  dcterms:accessRights <http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4#accessRights>;
+  dcterms:publisher [ a foaf:Agent;
+      foaf:name "IBGE - Instituto Brasileiro de Geografia e Estatistica"
+    ];
+  dcterms:isPartOf <http://localhost:8080/dataset/db0b688e-e3a4-42b8-bcb6-a75efef0a3d7>;
+  <http://semanticscience.org/resource/SIO_000628> <http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4/metrics/445c0a70d1e214e545b261559e2842f4>,
+    <http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4/metrics/5d27e854a9e78eb3f663331cd47cdc13>;
+  dcat:accessURL <https://geoservicos.ibge.gov.br/geoserver/ows?service=WFS&request=GetCapabilities&version=2.0.0>;
+  dcat:format "CSV";
+  dcat:mediaType "text/csv";
+  dcterms:conformsTo <http://localhost:8080/profile/02c649de-c579-43bb-b470-306abdc808c7> .
+
+<http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4#identifier>
+  a <http://purl.org/spar/datacite/Identifier>;
+  dcterms:identifier "http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4" .
+
+<http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4#accessRights>
+  a dcterms:RightsStatement;
+  dcterms:description "This resource has no access restriction" .
+
+<http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4/metrics/445c0a70d1e214e545b261559e2842f4>
+  <http://semanticscience.org/resource/SIO_000628> <https://www.ietf.org/rfc/rfc3986.txt>;
+  <http://semanticscience.org/resource/SIO_000332> <https://www.ietf.org/rfc/rfc3986.txt> .
+
+<http://localhost:8080/distribution/1da88e08-7dff-4cab-8835-d38ba90718c4/metrics/5d27e854a9e78eb3f663331cd47cdc13>
+  <http://semanticscience.org/resource/SIO_000628> <https://www.wikidata.org/wiki/Q8777>;
+  <http://semanticscience.org/resource/SIO_000332> <https://www.wikidata.org/wiki/Q8777> .
+
+<http://localhost:8080/profile/02c649de-c579-43bb-b470-306abdc808c7> <http://www.w3.org/2000/01/rdf-schema#label>
+    "Distribution Profile" .
